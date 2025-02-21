@@ -4,16 +4,22 @@ backend:
 media_folder: static/img
 public_folder: /img
 collections:
-  - name: 'Madelon ter Borg'
-    label: 'Work'
-    folder: '.'
+  - name: "Madelon ter Borg"
+    label: "Work"
+    folder: "content/"
     create: true
-    slug: '{{year}}-{{slug}}'
+    slug: "{{year}}-{{slug}}"
     editor:
       preview: false
     fields:
-      - { label: 'Titel', name: 'titel', widget: 'string' }
-      - { label: 'Jaar', name: 'jaar', widget: 'datetime', default: '{{now}}', dateformat: 'YYYY' }
-      - { label: 'Medium', name: 'medium', widget: 'string' }
-      - { label: 'Beschrijving', name: 'beschrijving', widget: 'markdown' }
-      - { label: 'Link', name: 'link', widget: 'text', required: 'false' }
+      - { label: "Titel", name: "titel", widget: "string" }
+      - {
+          label: "Jaar",
+          name: "jaar",
+          widget: "datetime",
+          default: "{{now}}",
+          dateformat: "YYYY",
+        }
+      - { label: "Medium", name: "medium", widget: "string" }
+      - { label: "Beschrijving", name: "beschrijving", widget: "markdown" }
+      - { label: "Link", name: "link", widget: "text", required: false }
