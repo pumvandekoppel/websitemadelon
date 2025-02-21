@@ -4,9 +4,9 @@ backend:
 media_folder: static/img
 public_folder: /img
 collections:
-  - name: "Madelon ter Borg"
-    label: "Work"
-    folder: "content/"
+  - name: "werken"
+    label: "Werken"
+    folder: "content/werken"
     create: true
     slug: "{{year}}-{{slug}}"
     editor:
@@ -23,3 +23,28 @@ collections:
       - { label: "Medium", name: "medium", widget: "string" }
       - { label: "Beschrijving", name: "beschrijving", widget: "markdown" }
       - { label: "Link", name: "link", widget: "text", required: false }
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "themes/simpel/layouts/index.html"
+        label: "Home Page"
+        name: "home"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Blurb", name: "blurb", widget: "text" }
+          - {
+              label: "Section",
+              name: "section",
+              widget: "object",
+              fields:
+                [
+                  { label: "Heading", name: "heading", widget: string },
+                  { label: "Text", name: "text", widget: "text" },
+                ],
+            }
+      - file: "content/over.md"
+        label: "Over"
+        name: "over"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "text" }
