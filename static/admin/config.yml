@@ -5,14 +5,15 @@ media_folder: static/img
 public_folder: /img
 collections:
   - name: 'Madelon ter Borg'
-    label: 'Portfolio'
-    folder: 'madelonterborg/portfolio'
+    label: 'Work'
+    folder: '.'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: '{{year}}-{{slug}}'
     editor:
       preview: false
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Year', name: 'year', widget: 'datetime', default: '{{now}}', dateformat: 'YYYY' }
+      - { label: 'Medium', name: 'description', widget: 'string' }
+      - { label: 'Beschrijving', name: 'beschrijving', widget: 'markdown' }
+      - { labael: 'Link', name: 'link', widget: 'text' }
