@@ -8,7 +8,7 @@ collections:
     label: "Werken"
     folder: "content/werken"
     create: true
-    slug: "{{year}}-{{slug}}"
+    slug: "{{titel}}"
     editor:
       preview: false
     fields:
@@ -23,8 +23,8 @@ collections:
       - { label: "Medium", name: "medium", widget: "string" }
       - { label: "Beschrijving", name: "beschrijving", widget: "markdown" }
       - { label: "Link", name: "link", widget: "text", required: false }
-  - name: "Pagina's"
-    label: "pagina's"
+  - name: "pagina"
+    label: "Pagina's"
     files:
       - file: "content/_index.md"
         label: "Home Page"
@@ -38,7 +38,7 @@ collections:
               widget: "object",
               fields:
                 [
-                  { label: "Heading", name: "heading", widget: "string" },
+                  { label: "Heading", name: "heading", widget: string },
                   { label: "Text", name: "text", widget: "text" },
                 ],
             }
