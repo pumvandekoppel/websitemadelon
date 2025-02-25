@@ -6,7 +6,7 @@ public_folder: /img
 collections:
   - name: "Madelon ter Borg"
     label: "Werken"
-    folder: "content/werken"
+    folder: "werken"
     create: true
     slug: "{{titel}}"
     editor:
