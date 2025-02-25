@@ -8,7 +8,7 @@ collections:
     label: "Werken"
     folder: "werken"
     create: true
-    slug: "{{titel}}"
+    slug: "{{title}}"
     editor:
       preview: false
     fields:
